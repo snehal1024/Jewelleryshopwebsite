@@ -138,7 +138,6 @@ const ShopContextProvider =(props)=>
         return totalAmt;
     }
 
-
     const contextValue ={getTotalAmount,getTotalItems,addItem,removeItem,getTotalCartItems,getTotalCartAmount,all_product,cartItems,addToCart,removeFromCart};
 
     return(

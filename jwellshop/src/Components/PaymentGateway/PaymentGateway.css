@@ -1,0 +1,67 @@
+.paymentgateway{
+    width: 100%;
+    height: 100vh;
+    background:#d9bbdb;
+    padding-top: 100px;
+    margin-bottom: 10%;
+}
+.payment-container{
+    width: 580px;
+    height: 420px;
+    background: white;
+    margin: auto;
+    padding: 40px 60px;
+}
+.payment-fields h1{
+    margin: 0% 30% 20px 30%;
+    color: #333;
+}
+.payment-fields p{
+    margin: 5px 30% 5px 30%;
+}
+
+.payment-fields label {
+    display: flex;
+    margin: 10px 30% 10px 30%;
+    font-weight: bold;
+    
+}
+.payment-fields input {
+    height: 40px;
+    width: 570px;
+    padding-left: 20px;
+    border: 1px solid #c9c9c9;
+    outline: none;
+    color: #5c5c5c;
+    font-size: 18px;
+    margin: 10px 30% 10px 30%;
+}
+
+.payment-fields input:focus {
+    border-color: #233cca;
+    outline: none;
+    box-shadow: 0 0 5px rgba(94, 114, 228, 0.3);
+}
+.btn {
+    width: 595px;
+    height: 50px;
+    color: white;
+    margin: 10px 30% 10px 30%;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #5e72e4; 
+}
+.btn:hover {
+    background-color: #4b5fb6;
+}
+.secure-text {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+    color: #888;
+}
+@media screen and (max-width:1280px) {
+    
+}

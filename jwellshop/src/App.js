@@ -11,6 +11,7 @@ import ring_banner from './Components/assets/ring_banner.jpg'
 import necklace_banner from './Components/assets/necklace_banner.jpg'
 import earring_banner from './Components/assets/earring_banner.jpg'
 import bangle_banner from './Components/assets/bangle_banner.jpg'
+import PaymentGateway from './Components/PaymentGateway/PaymentGateway';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         </Route>
         <Route path='/Cart' element={<Cart/>}/>
         <Route path='/Login' element={<LoginSignup/>}/>
+        <Route path='/PaymentGateway' element={<PaymentGateway/>}/>
       </Routes>
       <Footer/>
       </BrowserRouter>

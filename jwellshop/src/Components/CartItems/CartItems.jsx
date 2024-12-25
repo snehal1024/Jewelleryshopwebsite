@@ -1,10 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext} from 'react'
 import './CartItems.css'
 import { ShopContext } from '../../Context/ShopContext';
 import remove_icon from '../assets/crossremove_icon.png'
+import { useNavigate } from 'react-router-dom';
 
 const CartItems = () => {
     const{getTotalCartAmount,all_product,cartItems,removeFromCart}=useContext(ShopContext);
+    const navigate = useNavigate();
+
+    const handleCheckoutClick = () => {
+      navigate("/PaymentGateway"); // Redirect to the Payment Gateway
+    };
+  
 
   return (
     <div className="cartitems">
@@ -52,7 +59,7 @@ const CartItems = () => {
                     <h3>${getTotalCartAmount()}</h3>
                 </div>
             </div>
-            <button>Proceed To Checkout</button>
+            <button onClick={handleCheckoutClick}>Proceed To Checkout</button>
         </div>
         <div className="cartitems-promocode">
             <p>If you have a promo code, Enter it here</p>

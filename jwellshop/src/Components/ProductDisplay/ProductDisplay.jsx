@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { useNavigate } from "react-router-dom";
 import './ProductDisplay.css'
 import star_icon from '../assets/star.png'
 import star_dull_icon from '../assets/dullstar.png'
@@ -7,6 +8,12 @@ import { ShopContext } from '../../Context/ShopContext'
 const ProductDisplay = (props) => {
     const {product}=props;
     const {addToCart,getTotalAmount,getTotalItems,addItem,removeItem}=useContext(ShopContext);
+    const navigate = useNavigate();
+
+  const handleBuyClick = () => {
+    navigate("/PaymentGateway"); // Redirect to the Payment Gateway
+  };
+
   return (
     <div className="productdisplay">
         <div className="productdisplay-left">
@@ -47,7 +54,7 @@ const ProductDisplay = (props) => {
             </div>
             <p className="productdisplay-right-category"><span>Category:</span>Ring,Necklace,Bangles,Earring</p>
             <p className="productdisplay-right-category"><span>Tags:</span>Diamond,Gold,Platinum,Silver</p>
-            <button className='productdisplay-right-buybtn'>Buy now</button>
+            <button className='productdisplay-right-buybtn' onClick={handleBuyClick}>Buy now</button>
         </div>
     </div>
 )
